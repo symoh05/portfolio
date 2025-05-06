@@ -16,7 +16,7 @@
   <style>
     /* ===== Global Variables ===== */
     :root {
-      --primary: #2563eb;       /* Blue */
+      --primary: #071b46;       /* Blue */
       --primary-dark: #1d4ed8;
       --secondary: #10b981;     /* Emerald */
       --dark: #1e293b;          /* Dark blue-gray */
@@ -58,6 +58,10 @@
       overflow-x: hidden;
     }
     
+
+
+  
+
     h1, h2, h3, h4 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
@@ -591,16 +595,79 @@
     }
     
     /* ===== Portfolio Section ===== */
-    .portfolio {
-      background-color: var(--light);
-    }
-    
-    .portfolio-filter {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 40px;
-    }
+   
+.portfolio {
+    background: linear-gradient(135deg, #0f172a 0%, rgb(0, 29, 49) 100%);
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--white);
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 50px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-item {
+  background-color: #166483;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-title {
+  color: var(--white);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-category {
+  color: var(--gray);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
     
     .filter-btn {
       padding: 8px 20px;
@@ -1266,25 +1333,47 @@
         </div>
         
         <div class="about-text animate slide-in-right">
-          <h3>Who am I?</h3>
-          <p>I'm Simon Ngugi, a passionate Full Stack Web Developer with a Bachelor's degree in Information Technology from KCA University. I specialize in building modern, responsive websites and mobile applications using technologies like PHP, Python, JavaScript (React, Vue), Java, C, HTML, CSS, Tailwind CSS, and more.</p>
-
-          <p>With hands-on experience in both front-end and back-end development, I focus on creating seamless user experiences and scalable web solutions that align with business goals. Whether you're a startup looking to launch your first website or an enterprise needing robust application architecture, I bring dedication, creativity, and technical excellence to every project.</p>
-
-          <p>I'm based in Kiambu, Kenya, and I'm always excited to collaborate with clients who value innovation and quality in digital products.</p>
-
+            <h3>I'm currently a student at KCA University</h3>
+            <p>I'm Simon Ngugi, a passionate Full Stack Web Developer and freelance software developer specializing in building modern, responsive websites, mobile apps, and SEO-optimized platforms.</p>
+            <p>As a student of Information Technology, I combine academic knowledge with real-world experience to create digital solutions for businesses and individuals. I also offer services such as website design, mobile application development, UI/UX design, backend development, and search engine optimization (SEO).</p>
+            <p>All GitHub demo websites are sample prototypes created to showcase ideas to potential clients. When a client likes the demo, I build them a fully customized, professional website or app. Payment is made only after the project is completed and meets their satisfaction.</p>
+          
+          
           <div class="skills-list">
-            <div class="skill-item"><i class="fas fa-check-circle skill-icon"></i> HTML5 & CSS3</div>
-            <div class="skill-item"><i class="fas fa-check-circle skill-icon"></i> JavaScript (ES6+)</div>
-            <div class="skill-item"><i class="fas fa-check-circle skill-icon"></i> React.js / Vue.js</div>
-            <div class="skill-item"><i class="fas fa-check-circle skill-icon"></i> PHP (Laravel, CodeIgniter)</div>
-            <div class="skill-item"><i class="fas fa-check-circle skill-icon"></i> Python (Django, Flask)</div>
-            <div class="skill-item"><i class="fas fa-check-circle skill-icon"></i> Java & C</div>
-            <div class="skill-item"><i class="fas fa-check-circle skill-icon"></i> MySQL & PostgreSQL</div>
-            <div class="skill-item"><i class="fas fa-check-circle skill-icon"></i> RESTful APIs</div>
-            <div class="skill-item"><i class="fas fa-check-circle skill-icon"></i> Git & Version Control</div>
-            <div class="skill-item"><i class="fas fa-check-circle skill-icon"></i> Agile Development</div>
+            <div class="skill-item animate slide-in-up delay-1">
+              <span class="skill-icon"><i class="fas fa-check"></i></span>
+              <span>PHP Development</span>
+            </div>
+            <div class="skill-item animate slide-in-up delay-2">
+              <span class="skill-icon"><i class="fas fa-check"></i></span>
+              <span>JavaScript & Frameworks</span>
+            </div>
+            <div class="skill-item animate slide-in-up delay-3">
+              <span class="skill-icon"><i class="fas fa-check"></i></span>
+              <span>HTML5 & CSS3</span>
+            </div>
+            <div class="skill-item animate slide-in-up delay-4">
+              <span class="skill-icon"><i class="fas fa-check"></i></span>
+              <span>Python Programming</span>
+            </div>
+            <div class="skill-item animate slide-in-up delay-1">
+              <span class="skill-icon"><i class="fas fa-check"></i></span>
+              <span>Java Development</span>
+            </div>
+            <div class="skill-item animate slide-in-up delay-2">
+              <span class="skill-icon"><i class="fas fa-check"></i></span>
+              <span>C Programming</span>
+            </div>
+            <div class="skill-item animate slide-in-up delay-3">
+              <span class="skill-icon"><i class="fas fa-check"></i></span>
+              <span>Tailwind CSS</span>
+            </div>
+            <div class="skill-item animate slide-in-up delay-4">
+              <span class="skill-icon"><i class="fas fa-check"></i></span>
+              <span>Responsive Design</span>
+            </div>
           </div>
+          
         </div>
       </div>
     </div>
@@ -1293,35 +1382,67 @@
   <!-- Services Section -->
   <section class="services" id="services">
     <div class="container">
-      <h2 class="section-title animate slide-in-up">Services</h2>
-      <p class="section-subtitle animate slide-in-up delay-1">What I offer</p>
+      <h2 class="section-title animate slide-in-up">My Services</h2>
+      <p class="section-subtitle animate slide-in-up delay-1">What I offer to my clients</p>
+      
       <div class="services-grid">
-        <div class="service-card animate slide-in-up delay-2">
-          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+        <div class="service-card animate slide-in-up">
           <div class="service-content">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
             <h3>Web Development</h3>
-            <p>Custom-built, responsive websites using modern frameworks like Laravel, Django, React, and more.</p>
+            <p>Custom website development from simple landing pages to complex web applications using modern technologies and frameworks.</p>
           </div>
         </div>
+        
+        <div class="service-card animate slide-in-up delay-1">
+          <div class="service-content">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Responsive Design</h3>
+            <p>Creating websites that look and function perfectly on all devices, from desktops to smartphones and tablets.</p>
+          </div>
+        </div>
+        
+        <div class="service-card animate slide-in-up delay-2">
+          <div class="service-content">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Designing intuitive user interfaces and seamless user experiences that engage visitors and drive conversions.</p>
+          </div>
+        </div>
+        
         <div class="service-card animate slide-in-up delay-3">
-          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
           <div class="service-content">
-            <h3>Mobile App Development</h3>
-            <p>Cross-platform mobile apps built with React Native, Flutter, and native Android/iOS tools.</p>
+            <div class="service-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>Backend Development</h3>
+            <p>Building robust server-side applications, APIs, and databases to power your web applications.</p>
           </div>
         </div>
+        
         <div class="service-card animate slide-in-up delay-4">
-          <div class="service-icon"><i class="fas fa-database"></i></div>
           <div class="service-content">
-            <h3>Database Design</h3>
-            <p>Efficient database modeling, optimization, and integration using SQL and NoSQL databases.</p>
+            <div class="service-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3>E-Commerce Solutions</h3>
+            <p>Developing secure, scalable online stores with payment integration and inventory management.</p>
           </div>
         </div>
-        <div class="service-card animate slide-in-up delay-5">
-          <div class="service-icon"><i class="fas fa-tools"></i></div>
+        
+        <div class="service-card animate slide-in-up delay-4">
           <div class="service-content">
-            <h3>DevOps & Deployment</h3>
-            <p>CI/CD pipelines, cloud hosting, Docker, and server management for scalable deployments.</p>
+            <div class="service-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>SEO Optimization</h3>
+            <p>Optimizing websites to rank higher in search engines and attract more organic traffic.</p>
           </div>
         </div>
       </div>
@@ -1329,101 +1450,107 @@
   </section>
 
   <!-- Portfolio Section -->
-  <section class="portfolio" id="portfolio">
+<section class="portfolio" id="portfolio">
     <div class="container">
-      <h2 class="section-title animate slide-in-up">Portfolio</h2>
-      <p class="section-subtitle animate slide-in-up delay-1">Some of my recent projects</p>
-      <div class="portfolio-filter">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web</button>
-        <button class="filter-btn" data-filter="app">App</button>
-        <button class="filter-btn" data-filter="api">APIs</button>
-      </div>
+      <h2 class="section-title animate slide-in-up">Live Projects</h2>
+      <p class="section-subtitle animate slide-in-up delay-1">Websites I've launched for clients</p>
+  
       <div class="portfolio-grid">
+        <!-- Live Project 1 -->
         <div class="portfolio-item" data-category="web">
-          <div class="portfolio-image">
-            <img src="https://via.placeholder.com/700x400?text=Project+1" alt="Project 1">
-            <div class="portfolio-overlay">
-              <h3>Business Website</h3>
-              <span>HTML, CSS, JS</span>
-            </div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">BrandX Sneaker Store</h3>
+            <p class="portfolio-category">E-commerce Website</p>
+            <a href="https://www.brandx.co.ke" target="_blank" class="btn btn-primary btn-sm">Visit Site</a>
           </div>
         </div>
-        <div class="portfolio-item" data-category="app">
-          <div class="portfolio-image">
-            <img src="https://via.placeholder.com/700x400?text=Project+2" alt="Project 2">
-            <div class="portfolio-overlay">
-              <h3>Mobile App UI</h3>
-              <span>React Native</span>
-            </div>
+  
+        <!-- Live Project 2 -->
+        <div class="portfolio-item" data-category="web">
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">Aksa Genset Services</h3>
+            <p class="portfolio-category">Service Website</p>
+            <a href="https://www.aksagensetservices.co.ke" target="_blank" class="btn btn-primary btn-sm">Visit Site</a>
           </div>
         </div>
-        <div class="portfolio-item" data-category="api">
-          <div class="portfolio-image">
-            <img src="https://via.placeholder.com/700x400?text=Project+3" alt="Project 3">
-            <div class="portfolio-overlay">
-              <h3>RESTful API</h3>
-              <span>Node.js, Express</span>
-            </div>
+      </div>
+  
+      <br><br>
+  
+      <h2 class="section-title animate slide-in-up">Sample Demo Websites</h2>
+      <p class="section-subtitle animate slide-in-up delay-1">These are free prototypes to showcase ideas to clients</p>
+  
+      <div class="portfolio-grid">
+        <!-- Demo 1 -->
+        <div class="portfolio-item" data-category="demo">
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">Golden Blades Barber & Spa</h3>
+            <p class="portfolio-category">Business Landing Page</p>
+            <a href="https://symoh05.github.io/goldenblades" target="_blank" class="btn btn-primary btn-sm">View Demo</a>
+          </div>
+        </div>
+  
+        <!-- Demo 2 -->
+        <div class="portfolio-item" data-category="demo">
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">Azizi Spa</h3>
+            <p class="portfolio-category">Spa Service Demo</p>
+            <a href="https://symoh05.github.io/azizi" target="_blank" class="btn btn-primary btn-sm">View Demo</a>
+          </div>
+        </div>
+  
+        <!-- Demo 3 -->
+        <div class="portfolio-item" data-category="demo">
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">Future Investment Real Estate</h3>
+            <p class="portfolio-category">Real Estate Showcase</p>
+            <a href="https://symoh05.github.io/futureinvestment" target="_blank" class="btn btn-primary btn-sm">View Demo</a>
+          </div>
+        </div>
+  
+        <!-- Demo 4 -->
+        <div class="portfolio-item" data-category="demo">
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">Onel Electronics</h3>
+            <p class="portfolio-category">Product Showcase</p>
+            <a href="https://symoh05.github.io/nextplug" target="_blank" class="btn btn-primary btn-sm">View Demo</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section class="experience" id="experience">
+ <!-- Experience Section -->
+<section class="experience" id="experience">
     <div class="container">
-      <h2 class="section-title animate slide-in-up">Experience</h2>
-      <p class="section-subtitle animate slide-in-up delay-1">My professional journey</p>
+      <h2 class="section-title animate slide-in-up">My Experience</h2>
+      <p class="section-subtitle animate slide-in-up delay-1">Education and professional journey</p>
+  
       <div class="timeline">
-        <div class="timeline-item animate slide-in-left delay-2">
+        <!-- Education -->
+        <div class="timeline-item animate slide-in-up">
           <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 - Present</div>
           <div class="timeline-content">
-            <div class="timeline-date">2022 - Present</div>
-            <h3>Freelance Developer</h3>
-            <p>Building custom web and mobile applications for startups and small businesses across Kenya.</p>
+            <h3>KCA University</h3>
+            <p>Bachelor of Science in Information Technology</p>
+            <p>Specializing in Web Development, Software Engineering, and Database Management.</p>
           </div>
         </div>
-        <div class="timeline-item animate slide-in-right delay-3">
+  
+        <!-- Freelance Work -->
+        <div class="timeline-item animate slide-in-up delay-1">
           <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 - Present</div>
           <div class="timeline-content">
-            <div class="timeline-date">2021 - 2022</div>
-            <h3>Intern at Tech Solutions Ltd.</h3>
-            <p>Worked on internal tools and client projects using PHP, Python, and JavaScript frameworks.</p>
-          </div>
-        </div>
-        <div class="timeline-item animate slide-in-left delay-4">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">2018 - 2021</div>
-            <h3>Bachelor of Science in IT</h3>
-            <p>KCA University | Specialized in Web & Application Development</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <h2 class="section-title animate slide-in-up">Testimonials</h2>
-      <p class="section-subtitle animate slide-in-up delay-1">What people say about me</p>
-      <div class="testimonials-slider animate scale-in delay-2">
-        <div class="testimonial-item">
-          <div class="testimonial-avatar">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1">
-          </div>
-          <p class="testimonial-text">Simon delivered our project ahead of schedule and was very professional throughout. Highly recommended!</p>
-          <h4 class="testimonial-author">John Mwangi</h4>
-          <p class="testimonial-position">CEO, NairobiTech</p>
-          <div class="testimonial-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <h3>Freelance Web & App Developer</h3>
+            <p>Designing and developing responsive websites, mobile apps, and backend systems for small businesses and startups across Kenya.</p>
+            <ul class="skills-list">
+              <li><i class="fas fa-check-circle skill-icon"></i> Full Stack Web Development</li>
+              <li><i class="fas fa-check-circle skill-icon"></i> UI/UX Design</li>
+              <li><i class="fas fa-check-circle skill-icon"></i> SEO Optimization</li>
+              <li><i class="fas fa-check-circle skill-icon"></i> Client Consultation</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -1433,21 +1560,28 @@
   <!-- Contact Section -->
   <section class="contact" id="contact">
     <div class="container">
-      <h2 class="section-title animate slide-in-up">Contact Me</h2>
-      <p class="section-subtitle animate slide-in-up delay-1">Let's work together</p>
+      <h2 class="section-title animate slide-in-up">Get In Touch</h2>
+      <p class="section-subtitle animate slide-in-up delay-1">Have a project in mind? Let's talk</p>
+      
       <div class="contact-content">
-        <div class="contact-info animate slide-in-left delay-2">
-          <h3>Contact Info</h3>
+        <div class="contact-info animate slide-in-left">
+          <h3>Contact Information</h3>
+          
           <div class="contact-details">
             <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
               <div class="contact-text">
                 <h4>Location</h4>
                 <p>Kiambu, Kenya</p>
               </div>
             </div>
+            
             <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
               <div class="contact-text">
                 <h4>Phone</h4>
                 <p><a href="tel:+254777992666">+254 777 992 666</a></p>
@@ -1455,30 +1589,49 @@
                 <p><a href="tel:+254773743248">+254 773 743 248</a></p>
               </div>
             </div>
+            
             <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
               <div class="contact-text">
                 <h4>Email</h4>
                 <p><a href="mailto:simon@example.com">simon@example.com</a></p>
               </div>
             </div>
           </div>
+          
+          <div class="hero-social-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
-        <div class="contact-form animate slide-in-right delay-3">
-          <form action="#" method="POST">
+        
+        <div class="contact-form animate slide-in-right">
+          <form id="contactForm">
             <div class="form-group">
               <label for="name">Your Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+              <input type="text" id="name" class="form-control" required>
             </div>
+            
             <div class="form-group">
               <label for="email">Your Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email" required />
+              <input type="email" id="email" class="form-control" required>
             </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" class="form-control" required>
+            </div>
+            
             <div class="form-group">
               <label for="message">Your Message</label>
-              <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..." required></textarea>
+              <textarea id="message" class="form-control" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
               <i class="fas fa-paper-plane"></i> Send Message
             </button>
           </form>
@@ -1492,12 +1645,14 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-about">
-          <h3 class="footer-logo">
+          <div class="footer-logo">
             <span class="footer-logo-icon"><i class="fas fa-code"></i></span>
-            Simon Ngugi
-          </h3>
-          <p>A results-driven Full Stack Web Developer crafting high-performance, scalable web and mobile applications.</p>
+            <span>Simon Ngugi</span>
+          </div>
+          <p>Full Stack Web Developer specializing in creating modern, responsive websites and web applications.</p>
+          <p>Based in Kiambu, Kenya, I help businesses establish and enhance their online presence.</p>
         </div>
+        
         <div class="footer-links">
           <h3>Quick Links</h3>
           <ul>
@@ -1505,54 +1660,81 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
+        
+        <div class="footer-links">
+          <h3>My Services</h3>
+          <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Responsive Design</a></li>
+            <li><a href="#">UI/UX Design</a></li>
+            <li><a href="#">Backend Development</a></li>
+            <li><a href="#">E-Commerce Solutions</a></li>
+            <li><a href="#">SEO Optimization</a></li>
+          </ul>
+        </div>
+        
         <div class="footer-contact">
-          <h3>Contact</h3>
+          <h3>Contact Info</h3>
           <p><i class="fas fa-map-marker-alt"></i> Kiambu, Kenya</p>
-          <p><i class="fas fa-phone"></i> +254 777 992 666</p>
-          <p><i class="fas fa-envelope"></i> <a href="mailto:simon@example.com">simon@example.com</a></p>
+          <p><i class="fas fa-phone-alt"></i> +254 777 992 666</p>
+          <p><i class="fas fa-envelope"></i> simon@example.com</p>
+          
+          <div class="footer-social">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
+      
       <div class="copyright">
-        &copy; 2025 Simon Ngugi. All rights reserved.
+        <p>&copy; 2023 Simon Ngugi. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
   <!-- Back to Top Button -->
-  <div class="back-to-top" id="backToTop">
+  <a href="#home" class="back-to-top" id="backToTop">
     <i class="fas fa-arrow-up"></i>
-  </div>
+  </a>
 
-  <!-- JavaScript -->
   <script>
     // Mobile Menu Toggle
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.querySelector('.nav-menu');
-
+    
     mobileMenu.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
       mobileMenu.classList.toggle('active');
+      navMenu.classList.toggle('active');
     });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!navMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
-        navMenu.classList.remove('active');
+    
+    // Close mobile menu when clicking on a nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    
+    // Header scroll effect
+    const header = document.getElementById('header');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
       }
     });
-
-    // Scroll to top button
+    
+    // Back to top button
     const backToTop = document.getElementById('backToTop');
+    
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
         backToTop.classList.add('active');
@@ -1560,41 +1742,91 @@
         backToTop.classList.remove('active');
       }
     });
-
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Animate on scroll
-    const animateOnScroll = () => {
-      const elements = document.querySelectorAll('.animate');
-      elements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 50) {
-          el.classList.add('animated');
-        }
-      });
-    };
-
-    window.addEventListener('DOMContentLoaded', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
-
+    
     // Portfolio filtering
     const filterButtons = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
-
+    
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
-
-        portfolioItems.forEach(item => {
-          item.style.display = filter === 'all' || item.getAttribute('data-category') === filter ? 'block' : 'none';
-        });
-
+        // Remove active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
         button.classList.add('active');
+        
+        const filterValue = button.getAttribute('data-filter');
+        
+        portfolioItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
       });
+    });
+    
+    // Testimonials slider
+    let testimonialIndex = 0;
+    const testimonials = document.querySelectorAll('.testimonial-item');
+    
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial, i) => {
+        testimonial.style.display = i === index ? 'block' : 'none';
+      });
+    }
+    
+    function nextTestimonial() {
+      testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+      showTestimonial(testimonialIndex);
+    }
+    
+    // Initialize first testimonial
+    showTestimonial(testimonialIndex);
+    
+    // Auto-rotate testimonials
+    setInterval(nextTestimonial, 5000);
+    
+    // Animation on scroll
+    const animateElements = document.querySelectorAll('.animate');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    
+    animateElements.forEach(element => {
+      observer.observe(element);
+    });
+    
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      // Here you would typically send the data to a server
+      // For this example, we'll just show an alert
+      alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+      
+      // Reset form
+      contactForm.reset();
     });
   </script>
 </body>
 </html>
+
+
+
