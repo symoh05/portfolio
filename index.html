@@ -141,13 +141,13 @@
     }
     
     .btn-primary {
-      background-color: var(--primary);
+      background-color: #1d4ed8;
       color: var(--white);
       box-shadow: var(--shadow);
     }
     
     .btn-primary:hover {
-      background-color: var(--primary-dark);
+      background-color: var(--primary);
       transform: translateY(-3px);
       box-shadow: var(--shadow-md);
     }
@@ -624,74 +624,6 @@
       gap: 30px;
     }
     
-    .portfolio-item {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-    }
-    
-    .portfolio-item:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
-    }
-    
-    .portfolio-image {
-      height: 250px;
-      overflow: hidden;
-    }
-    
-    .portfolio-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: var(--transition-slow);
-    }
-    
-    .portfolio-item:hover .portfolio-image img {
-      transform: scale(1.1);
-    }
-    
-    .portfolio-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to top, rgba(30, 41, 59, 0.9) 0%, transparent 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 30px;
-      opacity: 0;
-      transition: var(--transition);
-    }
-    
-    .portfolio-item:hover .portfolio-overlay {
-      opacity: 1;
-    }
-    
-    .portfolio-title {
-      color: var(--white);
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      transform: translateY(20px);
-      transition: var(--transition);
-      transition-delay: 0.1s;
-    }
-    
-    .portfolio-category {
-      color: var(--light-gray);
-      transform: translateY(20px);
-      transition: var(--transition);
-      transition-delay: 0.2s;
-    }
-    
-    .portfolio-item:hover .portfolio-title,
-    .portfolio-item:hover .portfolio-category {
-      transform: translateY(0);
-    }
     
     /* ===== Experience Section ===== */
     .timeline {
@@ -1192,8 +1124,19 @@
   background-color: #112240;
   border-radius: 12px;
   padding: 25px;
+  color: white;
   box-shadow: var(--shadow);
   transition: var(--transition);
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
   </style>
@@ -1553,31 +1496,37 @@
         </div>
         
         <div class="contact-form animate slide-in-right">
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" class="form-control" required></textarea>
-            </div>
-            
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-          </form>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form animate slide-in-right">
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="857e96d1-5db0-4d9f-a51f-acb11b075e91">
+              
+                <!-- Optional: Redirect URL after submission -->
+                <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you"> -->
+              
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+              
+                <!-- Form Fields -->
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" class="form-control" required />
+                </div>
+              
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" class="form-control" required />
+                </div>
+              
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+              
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+              </form>
         </div>
       </div>
     </div>
