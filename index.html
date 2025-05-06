@@ -58,10 +58,6 @@
       overflow-x: hidden;
     }
     
-
-
-  
-
     h1, h2, h3, h4 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
@@ -595,79 +591,16 @@
     }
     
     /* ===== Portfolio Section ===== */
-   
-.portfolio {
-    background: linear-gradient(135deg, #0f172a 0%, rgb(0, 29, 49) 100%);
-  padding: 100px 0;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--white);
-  position: relative;
-}
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 80px;
-  height: 4px;
-  background: var(--primary);
-}
-
-.section-subtitle {
-  font-size: 1.1rem;
-  color: var(--gray);
-  margin-bottom: 50px;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-}
-
-.portfolio-item {
-  background-color: #166483;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-
-.portfolio-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.portfolio-title {
-  color: var(--white);
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.portfolio-category {
-  color: var(--gray);
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-}
-
-.btn-primary {
-  background-color: var(--primary);
-  color: var(--white);
-  border: none;
-  padding: 8px 16px;
-  font-size: 0.85rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-dark);
-}
+    .portfolio {
+      background-color: var(--light);
+    }
+    
+    .portfolio-filter {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
     
     .filter-btn {
       padding: 8px 20px;
@@ -1253,6 +1186,16 @@
     .mobile-menu-toggle.active span:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
+
+
+.portfolio-item {
+  background-color: #112240;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
   </style>
 </head>
 <body>
@@ -1596,7 +1539,7 @@
               </div>
               <div class="contact-text">
                 <h4>Email</h4>
-                <p><a href="mailto:simon@example.com">simon@example.com</a></p>
+                <p><a href="mailto:sngugi175@gmail.com">sngugi175@gmail.com</a></p>
               </div>
             </div>
           </div>
@@ -1681,7 +1624,7 @@
           <h3>Contact Info</h3>
           <p><i class="fas fa-map-marker-alt"></i> Kiambu, Kenya</p>
           <p><i class="fas fa-phone-alt"></i> +254 777 992 666</p>
-          <p><i class="fas fa-envelope"></i> simon@example.com</p>
+          <p><i class="fas fa-envelope"></i> sngugi175@gmail.com</p>
           
           <div class="footer-social">
             <a href="#" target="_blank"><i class="fab fa-github"></i></a>
@@ -1827,6 +1770,3 @@
   </script>
 </body>
 </html>
-
-
-
