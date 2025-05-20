@@ -1250,51 +1250,158 @@
       </div>
     </div>
   </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-shape shape-1"></div>
-    <div class="hero-shape shape-2"></div>
-    
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h4 class="hero-subtitle animate slide-in-left">Hello, I'm</h4>
-                   <h1 class="hero-title animate slide-in-left delay-1">Simon Ngugi</h1>
-          <h4 class="hero-subtitle animate slide-in-left delay-2">Full Stack Web Developer</h4>
-          <p class="hero-description animate slide-in-left delay-3">I create beautiful, functional websites and applications with cutting-edge technologies. Based in Kiambu, Kenya, I help businesses establish their online presence.</p>
-          
-          <div class="hero-buttons animate slide-in-left delay-4">
-            <a href="#portfolio" class="btn btn-primary">
-              <i class="fas fa-eye"></i> View My Work
-            </a>
-            <a href="#contact" class="btn btn-secondary">
-              <i class="fas fa-paper-plane"></i> Contact Me
-            </a>
-          </div>
-          
-          <div class="hero-social-links animate slide-in-left delay-5">
-            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-          </div>
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-shape shape-1"></div>
+  <div class="hero-shape shape-2"></div>
+  
+  <!-- Background Image with Dark Overlay -->
+  <div class="hero-background">
+    <img src="me.jpg" alt="Simon Ngugi">
+    <div class="hero-overlay"></div>
+  </div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h4 class="hero-subtitle animate slide-in-left">Hello, I'm</h4>
+        <h1 class="hero-title animate slide-in-left delay-1">Simon Ngugi</h1>
+        <h4 class="hero-subtitle animate slide-in-left delay-2">Full Stack Web Developer</h4>
+        <p class="hero-description animate slide-in-left delay-3">I create beautiful, functional websites and applications with cutting-edge technologies. Based in Kiambu, Kenya, I help businesses establish their online presence.</p>
+        
+        <div class="hero-buttons animate slide-in-left delay-4">
+          <a href="#portfolio" class="btn btn-primary">
+            <i class="fas fa-eye"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
         </div>
         
-        <div class="hero-image animate scale-in delay-2">
-          <div class="code-icon-animation">
-            <i class="fas fa-code"></i>
-            <div class="circles">
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-            </div>
-          </div>
+        <div class="hero-social-links animate slide-in-left delay-5">
+          <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
+<style>
+/* Hero Section Styles */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.8); /* Dark blue overlay */
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-text {
+  max-width: 600px;
+  text-align: left; /* Left-aligned content */
+}
+
+/* Existing animations and other styles remain the same */
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--gray);
+  margin-bottom: 30px;
+}
+
+.hero-description {
+  margin-bottom: 40px;
+  max-width: 600px;
+  color: var(--gray);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.hero-social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-text {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+  
+  .hero-social-links {
+    justify-content: flex-start;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+</style>
   <!-- About Section -->
   <section class="about" id="about">
     <div class="container">
