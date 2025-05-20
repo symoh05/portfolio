@@ -1255,6 +1255,12 @@
   <div class="hero-shape shape-1"></div>
   <div class="hero-shape shape-2"></div>
   
+  <!-- Background Image with Dark Overlay -->
+  <div class="hero-background">
+    <img src="me.jpg" alt="Simon Ngugi">
+    <div class="hero-overlay"></div>
+  </div>
+  
   <div class="container">
     <div class="hero-content">
       <div class="hero-text">
@@ -1292,21 +1298,30 @@
   padding-top: 100px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
 }
 
-.hero::before {
-  content: '';
+.hero-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('me.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3; /* Adjust this value (0.1 to 0.5) to control image visibility */
   z-index: -1;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.8); /* Dark blue overlay */
 }
 
 .hero-content {
@@ -1318,10 +1333,10 @@
 
 .hero-text {
   max-width: 600px;
-  text-align: left;
+  text-align: left; /* Left-aligned content */
 }
 
-/* Rest of your existing hero styles remain the same */
+/* Existing animations and other styles remain the same */
 .hero-title {
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -1361,11 +1376,11 @@
   }
   
   .hero-buttons {
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .hero-social-links {
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .hero-title {
@@ -1380,7 +1395,6 @@
 @media (max-width: 576px) {
   .hero-buttons {
     flex-direction: column;
-    align-items: center;
   }
   
   .hero-title {
