@@ -400,18 +400,50 @@
       position: relative;
     }
     
-   
-    .hero-image img {
-      border-radius: 20px;
-      box-shadow: var(--shadow-xl);
-      height: 500px;
-      width: 500px;
-      transform: perspective(1000px) rotateY(-15deg);
-      transition: var(--transition-slow);
+    .code-icon-animation {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8rem;
+      color: var(--primary);
+      animation: pulse 2s infinite;
     }
     
-    .hero-image:hover img {
-      transform: perspective(1000px) rotateY(0deg);
+    .circles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .circle {
+      position: absolute;
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .circle:nth-child(1) {
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      animation-delay: 0s;
+    }
+    
+    .circle:nth-child(2) {
+      width: 70%;
+      height: 70%;
+      opacity: 0.2;
+      animation-delay: 0.2s;
+    }
+    
+    .circle:nth-child(3) {
+      width: 40%;
+      height: 40%;
+      opacity: 0.3;
+      animation-delay: 0.4s;
     }
     
     .hero-title {
@@ -1143,6 +1175,17 @@
       .skills-list {
         grid-template-columns: 1fr;
       }
+      
+      /* Fix for project containers on small screens */
+      .portfolio-item iframe {
+        width: 100% !important;
+        height: 500px !important;
+        transform: scale(1) !important;
+      }
+      
+      .portfolio-item {
+        padding: 15px;
+      }
     }
     
     @media (max-width: 576px) {
@@ -1156,6 +1199,12 @@
       
       .portfolio-filter {
         flex-wrap: wrap;
+      }
+      
+      .code-icon-animation {
+        width: 250px;
+        height: 250px;
+        font-size: 6rem;
       }
     }
     
@@ -1211,7 +1260,7 @@
       <div class="hero-content">
         <div class="hero-text">
           <h4 class="hero-subtitle animate slide-in-left">Hello, I'm</h4>
-          <h1 class="hero-title animate slide-in-left delay-1">Simon Ngugi</h1>
+                   <h1 class="hero-title animate slide-in-left delay-1">Simon Ngugi</h1>
           <h4 class="hero-subtitle animate slide-in-left delay-2">Full Stack Web Developer</h4>
           <p class="hero-description animate slide-in-left delay-3">I create beautiful, functional websites and applications with cutting-edge technologies. Based in Kiambu, Kenya, I help businesses establish their online presence.</p>
           
@@ -1233,7 +1282,14 @@
         </div>
         
         <div class="hero-image animate scale-in delay-2">
-          <img src="me.jpg" alt="Simon Ngugi">
+          <div class="code-icon-animation">
+            <i class="fas fa-code"></i>
+            <div class="circles">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
