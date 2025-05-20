@@ -1251,15 +1251,13 @@
     </div>
   </header>
 <!-- Hero Section -->
+<!-- Hero Section -->
 <section class="hero" id="home">
   <div class="hero-shape shape-1"></div>
   <div class="hero-shape shape-2"></div>
   
-  <!-- Background Image with Dark Overlay -->
-  <div class="hero-background">
-    <img src="me.jpg" alt="Simon Ngugi">
-    <div class="hero-overlay"></div>
-  </div>
+  <!-- Background Image (Mobile Only) -->
+  <div class="hero-mobile-bg"></div>
   
   <div class="container">
     <div class="hero-content">
@@ -1298,32 +1296,38 @@
   padding-top: 100px;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
 }
 
-.hero-background {
+/* Mobile Background Image */
+.hero-mobile-bg {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: url('me.jpg');
+  background-size: contain; /* Ensures full image is visible */
+  background-position: center bottom; /* Positions image at bottom */
+  background-repeat: no-repeat;
+  opacity: 0.3;
   z-index: -1;
 }
 
-.hero-background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .hero-mobile-bg {
+    display: block;
+  }
+  
+  /* Adjust hero content spacing for mobile */
+  .hero-content {
+    padding-bottom: 40vh; /* Creates space for the image */
+  }
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(15, 23, 42, 0.8); /* Dark blue overlay */
-}
-
+/* Rest of your hero styles */
 .hero-content {
   width: 100%;
   max-width: 1200px;
@@ -1333,10 +1337,9 @@
 
 .hero-text {
   max-width: 600px;
-  text-align: left; /* Left-aligned content */
+  text-align: left;
 }
 
-/* Existing animations and other styles remain the same */
 .hero-title {
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -1376,11 +1379,11 @@
   }
   
   .hero-buttons {
-    justify-content: flex-start;
+    justify-content: center;
   }
   
   .hero-social-links {
-    justify-content: flex-start;
+    justify-content: center;
   }
   
   .hero-title {
@@ -1395,10 +1398,18 @@
 @media (max-width: 576px) {
   .hero-buttons {
     flex-direction: column;
+    align-items: center;
   }
   
   .hero-title {
     font-size: 2rem;
+  }
+  
+  /* Adjust image positioning for very small screens */
+  .hero-mobile-bg {
+    background-size: cover;
+    background-position: center top;
+    opacity: 0.2;
   }
 }
 </style>
