@@ -1251,13 +1251,9 @@
     </div>
   </header>
 <!-- Hero Section -->
-<!-- Hero Section -->
 <section class="hero" id="home">
   <div class="hero-shape shape-1"></div>
   <div class="hero-shape shape-2"></div>
-  
-  <!-- Background Image (Mobile Only) -->
-  <div class="hero-mobile-bg"></div>
   
   <div class="container">
     <div class="hero-content">
@@ -1299,35 +1295,20 @@
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
 }
 
-/* Mobile Background Image */
-.hero-mobile-bg {
-  display: none;
+.hero::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-image: url('me.jpg');
-  background-size: contain; /* Ensures full image is visible */
-  background-position: center bottom; /* Positions image at bottom */
-  background-repeat: no-repeat;
-  opacity: 0.3;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Adjust this value (0.1 to 0.5) to control image visibility */
   z-index: -1;
 }
 
-/* Show only on mobile */
-@media (max-width: 768px) {
-  .hero-mobile-bg {
-    display: block;
-  }
-  
-  /* Adjust hero content spacing for mobile */
-  .hero-content {
-    padding-bottom: 40vh; /* Creates space for the image */
-  }
-}
-
-/* Rest of your hero styles */
 .hero-content {
   width: 100%;
   max-width: 1200px;
@@ -1340,6 +1321,7 @@
   text-align: left;
 }
 
+/* Rest of your existing hero styles remain the same */
 .hero-title {
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -1403,13 +1385,6 @@
   
   .hero-title {
     font-size: 2rem;
-  }
-  
-  /* Adjust image positioning for very small screens */
-  .hero-mobile-bg {
-    background-size: cover;
-    background-position: center top;
-    opacity: 0.2;
   }
 }
 </style>
